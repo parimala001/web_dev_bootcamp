@@ -1,0 +1,27 @@
+<!--Assignment-7: Create a button, when you click on the button some portion of the paragraph should be updated.-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>span tag demo</title>
+	<style >
+		.letter{
+			background-color: skyblue;
+		}
+	</style>
+
+</head>
+<body>
+	<h2 style="color: red;">Welcome to bootcamp</h2>
+	<p>
+		<span id="t1" class="letter">2nd year</span>
+			students are doing
+		<span id="t2" class="letter">good</span>
+	</p>
+	<button type="button " onclick= "changeText()">change text</button>
+	<script >
+		function changeText(){
+			document.getElementById('t1').innerHTML ="2nd year , IT ";
+		}
+	</script>
+</body>
+</html>
