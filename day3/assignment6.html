@@ -1,0 +1,57 @@
+<!--Assignment - 6: Create an input that reads the name, aadhaar number, address, and displays it in the table format.-->
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Registration page</title>
+</head>
+<body>
+	<form  target="_blank">
+		<!-- name-->
+		<label for="name"> Name :</label>
+		<input type="text" id="name" name="name" placeholder=" name pls">
+			<br/><br/>
+
+		<!--aadhar number-->
+		<label for="num">Aadhaar Number :</label>
+		<input type="Numb" id="num" name="aanum" placeholder="aadhaar pls">
+		<br/><br/>
+
+		<!--Address-->
+		<label for="add">Address :</label>
+		<input type="text" id="add" name="address"/>
+		<br/><br/>
+
+		<!--submit Button-->
+		<button onclick="readData()">Submit</button>
+
+	</form>
+	<script>
+		function readData(){
+			var name=document.getElementById('name').value;
+			var nu=document.getElementById('num').value;
+			var ad=document.getElementById('add').value;
+
+				document.getElementById('abc').innerHTML=name;
+				document.getElementById('123').innerHTML=nu;
+				document.getElementById('ab').innerHTML=ad;
+
+
+			//alert('Name :'+ fname +' -'+ lname + 'password :' + pass + ',' +cpass);
+		}
+	</script>
+		<table border="1">
+			<tr>
+				<th> Name</th><!--1st col-->
+				<th>Aaadhaar Number</th><!--2nd col-->
+				<th>Address</th><!--3rd col-->
+			</tr>
+			<tr>
+				<td id="abc"></td>
+				<td id="123"></td>
+				<td id="ab"></td>
+			</tr>
+		</table>
+
+</body>
+</html>

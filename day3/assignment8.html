@@ -1,0 +1,30 @@
+<!--Assignment - 8: Create an input that reads from the data list through the select tag and display the data in the paragraph tag of HTML-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Data List</title>
+		<style >
+			p{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<label>Choose your year of study</label>
+		<select id="year">
+			<option>I yr</option>
+			<option>II yr</option>
+			<option>III yr</option>
+			<option>IV yr</option>
+		</select><button onclick="readData()">submit</button>
+
+		<p id="result"></p>
+		<script >
+			function readData() {
+				var c=document.getElementById('year').value;
+				document.getElementById('result').innerHTML =c;
+
+			}
+		</script>
+	</body>
+</html>
