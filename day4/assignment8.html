@@ -1,0 +1,46 @@
+<!--Assignment - 8: Retrieve the Subscription data from the database into a table using HTML and PHP-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Table</title>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				
+				<th>Email ID</th>
+				
+			</tr>
+		<?php
+			
+			
+			$server="localhost:3306";
+			$username="root";
+			$password="";
+			$dbname="parimala";
+
+			// Connecting with Server
+			$conn=mysqli_connect($password,$dbname);	
+			if(!$conn) {
+				echo 'Connection Failure';
+			}
+
+			// Prepare an SQL Injection
+			$sql="SELECT * FROM contact_form";
+
+			// query this injection
+			$data=mysqli_query($conn,$sql);
+			if(mysqli_num_rows($data)>0) {
+				while($row=mysqli_fetch_assoc($data)) {
+		?>
+					<tr>
+						<td><?php echo $row['email_id'];?></td>
+						
+					</tr>
+		<?php			
+				}
+			}
+		?>
+	</table>
+	</body>
+</html>
