@@ -1,0 +1,34 @@
+<!--Assignment - 6: Use Multiple CSS Classes to highlight on a single paragraph in the html-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Classes </title>
+	<style>
+		.abc {
+			text-align: center;
+		}
+		.def {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+		<p class="abc">
+			Web Dev Bootcamp
+		</p>
+		<p id="p1" class="abc def">
+			Today is the  Web Dev Bootcamp</p>
+		<button onclick="toogleName()">Toogle</button>
+		<button onclick="resetName()">Reset</button>
+
+		<script>
+			function toogleName() {
+				document.getElementById('p1').innerHTML='This is conducted for 5 sessions'
+			}
+			function resetName() {
+				document.getElementById('p1').innerHTML='Today is the  Web Dev Bootcamp'
+			}
+		</script>
+</body>
+</html>
